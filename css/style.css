@@ -1,0 +1,259 @@
+body {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav, header, section, footer {
+    display: block;
+}
+
+
+
+.layout1 header {
+    height: 400px;
+    background-color: #517A8D;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.layout1 header > img {
+    margin-top: 25px;
+    margin-left: 25px;
+}
+
+.layout1 nav {
+    width: 100%;
+}
+
+.layout1 nav > ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    list-style-type: none;
+    overflow: hidden;
+}
+
+.layout1 nav > ul > li {
+    background-color: black;
+    height: 60px;
+    width: 25%;
+}
+
+.layout1 ul > li > a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100%;
+    color: black;
+    background-color: #FFCDD2;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.layout1 nav > ul > li > a:hover,
+.layout1 nav > ul > li > a.active {
+    color: white;
+    background-color: #B94A48;
+}
+
+.layout1 main {
+    background-color: #212121;
+    height: 500px;
+    padding: 24px 0;
+    display: flex;
+    align-items: flex-start;
+    
+}
+
+.layout1 .rect {
+    background-color: #517A8D;
+    height: 40px;
+}
+
+.layout1 .rect_1 {
+    height: 33px;
+    width: 93px;
+    margin-left: 2.5%;
+}
+
+.layout1 .rect_2 {
+    margin-top: 7px;
+    height: 389px;
+    width: 335px;
+    margin-left: 12.5%;
+}
+
+.layout1 .rect_3 {
+    margin-top: 7px;
+    height: 338px;
+    width: 338px;
+    margin-left: 5%;
+}
+
+.layout1 footer {
+    height: 120px;
+    background-color: #D6D6D6;
+}
+
+
+
+.layout2 header {
+    height: 190px;
+    background-color: #212121;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.layout2 header img {
+    margin-top: 25px;
+    margin-left: 25px;
+}
+
+.layout2 nav > ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    list-style-type: none;
+    overflow: hidden;
+}
+
+.layout2 header + .container {
+    display: flex;
+    height: 1687px;
+}
+
+.layout2 .container nav {
+    flex: 1;
+    background-color: #FFCDD2;
+}
+
+.layout2 nav > ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    overflow: hidden;
+}
+
+.layout2 nav > ul > li {
+    background-color: black;
+    height: 134px;
+}
+
+.layout2 ul > li > a {
+    display: flex;
+    align-items: center;
+    padding-left: 8px;
+    height: 100%;
+    color: black;
+    background-color: #FFCDD2;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.layout2 nav > ul > li > a:hover,
+.layout2 nav > ul > li > a.active {
+    color: white;
+    background-color: #B94A48;
+}
+
+.layout2 .container main {
+    flex: 5;
+    background-color: #212121;
+}
+
+.layout2 .container main .first {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    background-color: #212121;
+}
+
+.layout2 .container main .first {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+
+.layout2 .container main .second {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 1000px;
+}
+
+.layout2 .container main .second > .col {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 50%;
+    height: 100%;
+    max-width: 338px;
+}
+
+.square {
+    display: inline-block;
+    width: 100%;
+    max-width: 338px;
+    background-color: #517A8D;
+}
+
+.square:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}
+
+.layout2 .container section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    background-color: #FFCDD2;
+}
+
+.layout2 section > .rect_6 {
+    height: 338px;
+    width: 40%;
+    max-width: 128px;
+    background-color: #C0D0E5;
+    margin-top: 30px;
+    margin-right: 30px;
+}
+
+.layout2 section > .container {
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 35px;
+}
+
+.layout2 section > .container > .rect_7 {
+    height: 125px;
+    width: 50%;
+    max-width: 128px;
+    background-color: #C0D0E5;
+}
+
+.layout2 footer {
+    height: 120px;
+    background-color: #D6D6D6;
+}
