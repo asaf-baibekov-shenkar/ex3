@@ -176,7 +176,7 @@ nav, header, section, footer {
 }
 
 .layout2 .container main {
-    flex: 5;
+    flex: 3;
     background-color: var(--black);
 }
 
