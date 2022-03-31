@@ -187,12 +187,6 @@ nav, header, section, footer {
     background-color: var(--black);
 }
 
-.layout2 .container main .first {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-evenly;
-}
-
 .layout2 .container main .second {
     margin-top: 120px;
     display: flex;
