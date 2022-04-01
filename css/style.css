@@ -117,7 +117,7 @@ nav, header, section, footer {
 
 
 .layout2 header {
-    height: 190px;
+    height: 192px;
     background-color: var(--black);
 }
 
@@ -256,6 +256,6 @@ nav, header, section, footer {
 }
 
 .layout2 footer {
-    height: 120px;
+    height: 121px;
     background-color: var(--gray);
 }
