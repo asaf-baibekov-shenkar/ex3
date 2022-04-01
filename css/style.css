@@ -24,7 +24,7 @@ nav, header, section, footer {
 
 
 .layout1 header {
-    height: 400px;
+    height: 388px;
     background-color: var(--blue);
     display: flex;
     flex-direction: column;
@@ -52,7 +52,7 @@ nav, header, section, footer {
 
 .layout1 nav > ul > li {
     background-color: black;
-    height: 60px;
+    height: 57px;
     width: 25%;
 }
 
@@ -77,10 +77,11 @@ nav, header, section, footer {
 
 .layout1 main {
     background-color: var(--black);
-    height: 500px;
+    height: 443px;
     padding: 24px 0;
     display: flex;
     align-items: flex-start;
+    justify-content: space-around;
     
 }
 
@@ -91,25 +92,25 @@ nav, header, section, footer {
 .layout1 .rect_1 {
     height: 33px;
     width: 93px;
-    margin-left: 2.5%;
+    margin-left: 2.8%;
 }
 
 .layout1 .rect_2 {
     margin-top: 7px;
     height: 389px;
     width: 335px;
-    margin-left: 12.5%;
+    margin-left: 15.1%;
 }
 
 .layout1 .rect_3 {
     margin-top: 7px;
     height: 338px;
     width: 338px;
-    margin-left: 5%;
+    margin-left: 2.5%;
 }
 
 .layout1 footer {
-    height: 120px;
+    height: 121px;
     background-color: var(--gray);
 }
 
