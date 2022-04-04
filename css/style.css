@@ -382,28 +382,6 @@ nav, header, section, footer {
     background-color: blue;
 }
 
-.layout3 main section .box:nth-child(2) {
-    opacity: 0.7;
-}
-.layout3 main section .box:nth-child(3) {
-    opacity: 0.4;
-}
-.layout3 main section .box:nth-child(4) {
-    opacity: 0.3;
-}
-.layout3 main section .box:nth-child(5) {
-    opacity: 0.4;
-}
-.layout3 main section .box:nth-child(6) {
-    opacity: 0.7;
-}
-.layout3 main section .box:nth-child(7) {
-    opacity: 1;
-}
-.layout3 main section .box:nth-child(8) {
-    opacity: 0.5;
-}
-
 @media screen and (max-width: 1000px) {
     .layout3 header {
         flex-direction: column;
