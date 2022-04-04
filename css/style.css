@@ -265,16 +265,15 @@ nav, header, section, footer {
 }
 
 .layout3 header .head {
-    width: 500px;
     min-width: 500px;
     background-color: var(--black);
     position: relative;
 }
 
-.layout3 header .head {
+.layout3 header .head::after {
     content: "";
     display: block;
-    padding-bottom: 500px;
+    padding-bottom: 100%;
 }
 
 .layout3 .head > .logo {
@@ -334,7 +333,7 @@ nav, header, section, footer {
     display: flex;
     justify-content: center;
     min-width: 500px;
-    height: 500px;
+    min-height: 500px;
     flex: 1;
     background-color: var(--blue);
 }
@@ -366,12 +365,51 @@ nav, header, section, footer {
     opacity: 0.7;
 }
 
+.layout3 main {
+    background-color: var(--black);
+    height: 500px;
+}
+
+.layout3 main section {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--pink);
+}
+
+.layout3 main section .box {
+    width: 250px;
+    height: 250px;
+    background-color: blue;
+}
+
+.layout3 main section .box:nth-child(2) {
+    opacity: 0.7;
+}
+.layout3 main section .box:nth-child(3) {
+    opacity: 0.4;
+}
+.layout3 main section .box:nth-child(4) {
+    opacity: 0.3;
+}
+.layout3 main section .box:nth-child(5) {
+    opacity: 0.4;
+}
+.layout3 main section .box:nth-child(6) {
+    opacity: 0.7;
+}
+.layout3 main section .box:nth-child(7) {
+    opacity: 1;
+}
+.layout3 main section .box:nth-child(8) {
+    opacity: 0.5;
+}
+
 @media screen and (max-width: 1000px) {
     .layout3 header {
         flex-direction: column;
     }
     .layout3 header .head {
-        width: 100%;
+        min-width: unset;
     }
     .layout3 header .container {
         height: 100vw;
@@ -381,5 +419,33 @@ nav, header, section, footer {
     }
     .layout3 header .container .box {
         max-height: none;
+    }
+    .layout3 main {
+        height: 300px;
+    }
+    .layout3 main section {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .layout3 main {
+        height: 500px;
+    }
+    .layout3 header .head > .logo {
+        width: 45px;
+    }
+    .layout3 header .head > .plus {
+        width: 43px;
+    }
+    .layout3 header .head > nav a {
+        font-size: 14px;
+    }
+    .layout3 header .container {
+        min-width: 250px;
+        min-height: 250px;
+    }
+    .layout3 main section {
+        justify-content: center;
     }
 }
