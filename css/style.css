@@ -262,7 +262,6 @@ nav, header, section, footer {
 
 .layout3 header {
     display: flex;
-    max-height: 500px;
 }
 
 .layout3 header .head {
