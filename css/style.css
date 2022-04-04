@@ -209,14 +209,14 @@ nav, header, section, footer {
     max-width: 338px;
 }
 
-.square {
+.layout2 .square {
     display: inline-block;
     width: 100%;
     max-width: 338px;
     background-color: var(--blue);
 }
 
-.square:after {
+.layout2 .square:after {
     content: "";
     display: block;
     padding-bottom: 100%;
@@ -258,4 +258,129 @@ nav, header, section, footer {
 .layout2 footer {
     height: 121px;
     background-color: var(--gray);
+}
+
+.layout3 header {
+    display: flex;
+    max-height: 500px;
+}
+
+.layout3 header .head {
+    width: 500px;
+    min-width: 500px;
+    background-color: var(--black);
+    position: relative;
+}
+
+.layout3 header .head {
+    content: "";
+    display: block;
+    padding-bottom: 500px;
+}
+
+.layout3 .head > .logo {
+    position: absolute;
+    margin-top: 25px;
+    margin-left: 25px;
+}
+
+.layout3 .head > .plus {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.layout3 .head > nav {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+.layout3 nav > ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+}
+
+.layout3 nav > ul > li {
+    background-color: black;
+    height: 62px;
+    flex: 1;
+}
+
+.layout3 nav > ul > li > a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100%;
+    color: black;
+    background-color: var(--pink);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.layout3 nav > ul > li > a:hover,
+.layout3 nav > ul > li > a.active {
+    color: white;
+    background-color: var(--red);
+}
+
+.layout3 header .container {
+    display: flex;
+    justify-content: center;
+    min-width: 500px;
+    height: 500px;
+    flex: 1;
+    background-color: var(--blue);
+}
+.layout3 header .container .col {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+}
+
+.layout3 header .container .box {
+    flex: 1;
+    max-height: 250px;
+    background-color: white;
+}
+
+.layout3 header .container .box:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}
+
+.layout3 header .container .col .box:nth-child(2) {
+    opacity: 0.9;
+}
+.layout3 header .container .col:nth-child(2) .box:nth-child(1) {
+    opacity: 0.8;
+}
+.layout3 header .container .col:nth-child(2) .box:nth-child(2) {
+    opacity: 0.7;
+}
+
+@media screen and (max-width: 1000px) {
+    .layout3 header {
+        flex-direction: column;
+    }
+    .layout3 header .head {
+        width: 100%;
+    }
+    .layout3 header .container {
+        height: 100vw;
+    }
+    .layout3 header .container .col {
+        flex: 1;
+    }
+    .layout3 header .container .box {
+        max-height: none;
+    }
 }
