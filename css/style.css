@@ -374,11 +374,6 @@ nav, header, section, footer {
     opacity: 0.7;
 }
 
-.layout3 main {
-    background-color: var(--black);
-    height: 500px;
-}
-
 .layout3 main section {
     display: flex;
     flex-wrap: wrap;
@@ -389,6 +384,11 @@ nav, header, section, footer {
     width: 250px;
     height: 250px;
     background-color: blue;
+}
+
+.layout3 footer {
+    height: 121px;
+    background-color: var(--gray);
 }
 
 @media screen and (max-width: 1000px) {
@@ -406,9 +406,6 @@ nav, header, section, footer {
     }
     .layout3 header .container .box {
         max-height: none;
-    }
-    .layout3 main {
-        height: 300px;
     }
     .layout3 main section {
         width: 100%;

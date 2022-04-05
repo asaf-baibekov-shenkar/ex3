@@ -1,30 +1,52 @@
-let colorIndex = 0;
-let colors = ['white', 'black', 'greenyellow', 'pink', 'blue', 'brown'];
+// view
 window.onload = (event) => {
-    dropBoxes(8);
+    dropBoxes(20);
     plusClick();
 }
 
+
+
+// controller
 let dropBoxes = (boxes) => {
-    let dropbox = document.getElementById("dropbox");
-    [...Array(boxes).keys()].forEach(i => {
-        let box = document.createElement('div');
-        box.className = 'box';
-        let opacity = (i <= (boxes - 1) / 2) ? (boxes - i) / boxes : i / (boxes - 1);
-        console.log(opacity);
-        box.style.opacity = opacity;
-        box.style.backgroundColor = 'white';
-        dropbox.append(box);
-    })
+    [...Array(boxes).keys()]
+        .map(value => {
+            return new Box(value, boxes).element;
+        })
+        .forEach(box => {
+            document
+                .getElementById("dropbox")
+                .append(box);
+        })
 }
 
 let plusClick = () => {
-    let plus = document.getElementsByTagName('header')[0].getElementsByClassName('head')[0];
-    plus.onclick = (event) => {
+    let plusElement = document.getElementsByTagName('header')[0].getElementsByClassName('head')[0];
+    plusElement.onclick = () => {
         colorIndex = (colorIndex == colors.length - 1) ? 0 : colorIndex + 1;
         Array.from(document.getElementById('dropbox').getElementsByClassName('box'))
             .forEach(element => {
                 element.style.backgroundColor = colors[colorIndex];
             });
+    }
+}
+
+// model
+let colorIndex = 0;
+let colors = ['white', 'black', 'greenyellow', 'pink', 'blue', 'brown'];
+
+class Box {
+    constructor(i, boxes) {
+        this.element = document.createElement('div');
+        this.element.className = 'box';
+        this.element.style.opacity = (i <= (boxes - 1) / 2) ? (boxes - i) / boxes : i / (boxes - 1);
+        this.element.style.backgroundColor = 'white';
+        this.element.onmouseover = function(event) {
+            colorIndex = (colorIndex == colors.length - 1) ? 0 : colorIndex + 1;
+            event.target.style.backgroundColor = colors[colorIndex];
+        }
+        this.element.onmouseout = function(event) {
+            colorIndex = ((colorIndex == 0) ? colors.length : colorIndex) - 1;
+            event.target.style.backgroundColor = colors[colorIndex];
+        }
     }
 }
