@@ -11,6 +11,11 @@
 body {
     margin: 0;
     font-family: sans-serif;
+    user-select: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 
 a {
@@ -276,6 +281,10 @@ nav, header, section, footer {
     padding-bottom: 100%;
 }
 
+.layout3 header .head:hover {
+    cursor: pointer;
+}
+
 .layout3 .head > .logo {
     position: absolute;
     margin-top: 25px;
@@ -373,7 +382,7 @@ nav, header, section, footer {
 .layout3 main section {
     display: flex;
     flex-wrap: wrap;
-    background-color: var(--pink);
+    background-color: var(--blue);
 }
 
 .layout3 main section .box {
