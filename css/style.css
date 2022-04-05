@@ -270,7 +270,7 @@ nav, header, section, footer {
 }
 
 .layout3 header .head {
-    min-width: 500px;
+    width: 500px;
     background-color: var(--black);
     position: relative;
 }
@@ -341,10 +341,9 @@ nav, header, section, footer {
 .layout3 header .container {
     display: flex;
     justify-content: center;
-    min-width: 500px;
-    min-height: 500px;
     flex: 1;
     background-color: var(--blue);
+    align-items: center;
 }
 .layout3 header .container .col {
     width: 250px;
@@ -392,6 +391,32 @@ nav, header, section, footer {
 }
 
 @media screen and (max-width: 1000px) {
+    .layout3 header .head {
+        flex: 1;
+        width: unset;
+    }
+    .layout3 header .head > .logo {
+        width: 45px;
+    }
+    .layout3 header .head > .plus {
+        width: 43px;
+    }
+    .layout3 header .head > nav a {
+        font-size: 14px;
+    }
+    .layout3 header .container .col {
+        width: unset;
+        flex: 1;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .layout3 main {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 500px) {
     .layout3 header {
         flex-direction: column;
     }
@@ -407,23 +432,8 @@ nav, header, section, footer {
     .layout3 header .container .box {
         max-height: none;
     }
-}
-
-@media screen and (max-width: 500px) {
-    .layout3 header .head > .logo {
-        width: 45px;
-    }
-    .layout3 header .head > .plus {
-        width: 43px;
-    }
-    .layout3 header .head > nav a {
-        font-size: 14px;
-    }
     .layout3 header .container {
         min-width: 250px;
         min-height: 250px;
-    }
-    .layout3 main {
-        justify-content: center;
     }
 }
