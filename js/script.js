@@ -1,6 +1,6 @@
 // view
 window.onload = (event) => {
-    dropBoxes(20);
+    dropBoxes(40);
     plusClick();
 }
 
@@ -39,7 +39,7 @@ class Box {
         this.element = document.createElement('div');
         this.element.className = 'box';
         this.element.style.opacity = (i <= (boxes - 1) / 2) ? (boxes - i) / boxes : i / (boxes - 1);
-        this.element.style.backgroundColor = 'white';
+        this.element.style.backgroundColor = colors[colorIndex];
         this.element.onmouseover = function(event) {
             colorIndex = (colorIndex == colors.length - 1) ? 0 : colorIndex + 1;
             event.target.style.backgroundColor = colors[colorIndex];
