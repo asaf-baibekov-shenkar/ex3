@@ -9,14 +9,8 @@ window.onload = (event) => {
 // controller
 let dropBoxes = (boxes) => {
     [...Array(boxes).keys()]
-        .map(value => {
-            return new Box(value, boxes).element;
-        })
-        .forEach(box => {
-            document
-                .getElementById("dropbox")
-                .append(box);
-        })
+        .map(value => new Box(value, boxes).element)
+        .forEach(box => document.getElementById("dropbox").append(box))
 }
 
 let plusClick = () => {
@@ -24,9 +18,7 @@ let plusClick = () => {
     plusElement.onclick = () => {
         colorIndex = (colorIndex == colors.length - 1) ? 0 : colorIndex + 1;
         Array.from(document.getElementById('dropbox').getElementsByClassName('box'))
-            .forEach(element => {
-                element.style.backgroundColor = colors[colorIndex];
-            });
+            .forEach(element => element.style.backgroundColor = colors[colorIndex]);
     }
 }
 
