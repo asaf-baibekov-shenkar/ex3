@@ -374,13 +374,13 @@ nav, header, section, footer {
     opacity: 0.7;
 }
 
-.layout3 main section {
+.layout3 main {
     display: flex;
     flex-wrap: wrap;
     background-color: var(--blue);
 }
 
-.layout3 main section .box {
+.layout3 main .box {
     width: 250px;
     height: 250px;
     background-color: blue;
@@ -407,15 +407,9 @@ nav, header, section, footer {
     .layout3 header .container .box {
         max-height: none;
     }
-    .layout3 main section {
-        width: 100%;
-    }
 }
 
 @media screen and (max-width: 500px) {
-    .layout3 main {
-        height: 500px;
-    }
     .layout3 header .head > .logo {
         width: 45px;
     }
@@ -429,7 +423,7 @@ nav, header, section, footer {
         min-width: 250px;
         min-height: 250px;
     }
-    .layout3 main section {
+    .layout3 main {
         justify-content: center;
     }
 }
