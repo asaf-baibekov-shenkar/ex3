@@ -423,6 +423,11 @@ nav, header, section, footer {
     .layout3 header .head {
         min-width: unset;
     }
+    .layout3 .head > .logo {
+        margin-left: unset;
+        left: 50%;
+        transform: translate(-50%, 0%);
+    }
     .layout3 header .container {
         height: 100vw;
     }
